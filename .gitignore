@@ -1,0 +1,22 @@
+# dependencies
+node_modules
+.DS_Store
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+package-lock.json
+*.lock
+
+nohup.out
+*.zip
+yarn.lock
+*.mp4
+
+DESIGN

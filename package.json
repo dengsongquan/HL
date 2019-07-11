@@ -1,0 +1,54 @@
+{
+  "name": "truechain-official-ssr",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "baixiaojian <15101661380@163.com>",
+  "private": true,
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "3030"
+    }
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "deva": "HOST=0.0.0.0 PORT=3000 nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "webgl-init": "node assets/webgl/processPoint.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "elliptic": "^6.4.1",
+    "iview": "^2.14.2",
+    "nuxt": "^1.0.0",
+    "qs": "^6.5.2",
+    "three": "^0.99.0",
+    "vue-dplayer": "0.0.10",
+    "vue-i18n": "^7.8.0",
+    "vue-js-modal": "^1.3.15"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-html": "^4.0.5",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vue": "^4.0.0",
+    "github-webhook-handler": "^0.7.1",
+    "pug": "^2.0.3",
+    "raw-loader": "^1.0.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-eslint-parser": "^3.2.2",
+    "vue-loader": "^13.7.2"
+  }
+}
