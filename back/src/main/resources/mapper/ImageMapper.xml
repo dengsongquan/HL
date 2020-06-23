@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.heeexy.example.dao.ImgDao">
+    <select id="listImages" resultType="com.alibaba.fastjson.JSONObject">
+        SELECT
+        w.id          id,
+        w.img         img
+        from images w
+        order by w.id desc
+    </select>
+</mapper>

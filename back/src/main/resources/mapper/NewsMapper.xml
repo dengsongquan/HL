@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.heeexy.example.dao.NewsDao">
+    <insert id="addNews" parameterType="com.alibaba.fastjson.JSONObject">
+        INSERT INTO news
+        (content,file)
+        values
+        (#{content}, #{file})
+    </insert>
+
+    <select id="countNews" resultType="Integer">
+    select count(0)
+    from news w
+    where w.delete_status = '1'
+</select>
+
+    <select id="listNews" resultType="com.alibaba.fastjson.JSONObject">
+        select
+        w.id                    id,
+        w.content               content,
+        w.file                  file,
+        date_format(w.create_time,'%Y.%m.%d %T') createTime
+        from news w where
+        w.delete_status = '1'
+        order by w.id DESC
+        LIMIT #{offSet}, #{pageRow}
+    </select>
+
+    <update id="updateNews" parameterType="com.alibaba.fastjson.JSONObject">
+        update news set
+        content = #{content },
+        file = #{file}
+        where id = #{id}
+    </update>
+</mapper>
